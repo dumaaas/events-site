@@ -2,26 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.row {
+  height: 65px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  justify-content: flex-start;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.row:nth-child(1n) {
+  background: white;
+  min-height: 400px;
+  color: white;
+  font-weight: bold;
+}
+
+.row:nth-child(2n) {
+  background: wheat;
+  min-height: 600px;
+}
+
+.row:nth-child(3n) {
+  background: whitesmoke;
+  min-height: 500px;
+}
+
+.container {
+  height: calc(100vh - 20px);
+}
+
+.loader-anim {
+  animation: loaderAnim 3s forwards;
+}
+
+@keyframes loaderAnim {
+  0% {
+    width: 0%;
+    transform: translateX(0);
+  }
+  50% {
+    width: 100%;
+    transform: translateX(0);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(100%);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.letter-anim {
+  animation: letterAnim 1s ease-in-out forwards;
+  animation-delay: 1.7s;
 }
+
+@keyframes letterAnim {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-80px);
+  }
+}
+
+.letter-anim-two {
+  animation: letterAnim 1s ease-in-out forwards;
+  animation-delay: 1.9s;
+}
+
+@keyframes letterAnim {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-80px);
+  }
+}
+
+.letter-anim-three {
+  animation: letterAnim 1s ease-in-out forwards;
+  animation-delay: 1.8s;
+}
+
+@keyframes letterAnim {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-80px);
+  }
+}
+
+.circle-anim {
+  animation: circleAnim 1s ease-in-out forwards;
+ top: 0;
+ left: 0;
+    animation-delay: 2.4s;
+}
+
+@keyframes circleAnim {
+  from {
+    height: 100vh;
+  }
+  to {
+   height: 0;
+  }
+}
+
