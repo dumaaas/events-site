@@ -3,16 +3,16 @@ import { useRouter } from "next/router";
 
 const variants = {
   in: {
-    scale: 0.8,
-    y: 100,
-    x: "100%",
+    scale: 1,
+    y: "100%",
+    x: 0,
     transition: {
       duration: 0.4
     }
   },
   center: {
-    x: 0,
-    scale: 0.8,
+    y: 0,
+    scale: 1,
     transformOrigin: "top",
     transition: {
       duration: 0.4
@@ -20,22 +20,22 @@ const variants = {
   },
   scaleUp: {
     scale: 1,
-    y: 0,
+    x: 0,
     transition: {
       duration: 0.4,
       delay: 0.5
     }
   },
   scaleDown: {
-    scale: 0.8,
-    y: 100,
+    scale: 1,
+    x: 0,
     transition: {
       duration: 0.4
     }
   },
   out: {
     opacity: 0,
-    x: "-100%",
+    y: "-100%",
     transition: {
       duration: 0.4,
       delay: 0.5
@@ -52,7 +52,7 @@ const TransitionEffect3 = ({ children }) => {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <div className="effect-3">
+    <div className="overflow-hidden effect-3">
       <AnimatePresence initial={false} mode='wait'>
         <motion.div
           key={asPath}

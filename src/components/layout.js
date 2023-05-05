@@ -13,7 +13,7 @@ export default function Layout({ children }) {
   return (
     <>
       <div
-        className={" bg-black overflow-hidden relative"}
+        className={" bg-black relative"}
       >
         <div className="circle-anim absolute z-[999999] flex items-center justify-center w-full h-screen text-white bg-black">
           <div className="flex gap-[20px] items-center overflow-hidden h-[20px]">

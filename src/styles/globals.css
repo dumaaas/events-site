@@ -117,3 +117,57 @@ body {
   }
 }
 
+.about-text::before {
+  display: block;
+  position: fixed;
+  top: 0;
+  /* left: 60%; */
+  width: 40%;
+  height: 160px;
+  background: linear-gradient(to bottom,#000 30%,rgba(255,255,255,0));
+  content: '';
+  z-index: 4;
+}
+
+.about-text::after {
+  display: block;
+  position: fixed;
+  top: auto;
+    bottom: 0;
+    transform: rotateZ(180deg);
+  width: 40%;
+  height: 100px;
+  background: linear-gradient(to bottom,#000 30%,rgba(255,255,255,0));
+  content: '';
+  z-index: 4;
+}
+
+.about-cover::before {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 120%;
+  border-style: solid;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 9%;
+  transform: rotate(-17deg);
+}
+
+.contact-btn::after {
+  content: "→";
+    display: block;
+    margin-left: 0.3em;
+    transform: rotate(-45deg);
+    will-change: transform;
+    transition: transform 0.45s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contact-btn:hover::after {
+  transform: rotate(0);
+}
