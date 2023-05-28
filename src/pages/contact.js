@@ -42,8 +42,8 @@ export default function contact() {
 
   return (
     <div className="flex w-full h-screen overflow-auto">
-      <div className="w-[40%] about-text relative z-[30]">
-        <div className="text-white max-w-[900px] px-[80px] pt-[140px] pb-[50px] flex flex-col">
+      <div className="sm:w-[50%] xl:w-[40%] sm:after:w-[50%] xl:after:w-[40%] sm:before:w-[50%] xl:before:w-[40%] about-text relative z-[30]">
+        <div className="text-white max-w-[900px] xl:px-[80px] lg:px-[50px] px-[30px] pt-[140px] pb-[50px] flex flex-col">
           <h2 className="text-2xl font-light uppercase ">Keep in touch</h2>
           <div className="py-[50px]">
             <p className="text-xl font-bold uppercase">
@@ -108,7 +108,7 @@ export default function contact() {
             <button className="relative inline-flex contact-btn">
               <span className="">Submit</span>
             </button>
-            <div className="flex items-center justify-between mt-[30px] gap-[20px] flex-wrap">
+            <div className="flex items-center justify-between mt-[30px] gap-[40px] xl:gap-[20px] flex-wrap">
               <div className="flex flex-col gap-[8px]">
                 <p>(068) 836-393</p>
                 <p>Serdara Šćepana 5</p>
@@ -129,11 +129,9 @@ export default function contact() {
           </div>
         </div>
       </div>
-      <div
-        className="fixed top-0 right-0 overflow-hidden about-cover"
+      <div className="fixed top-0 right-0 overflow-hidden about-cover xl:w-[60%] sm:w-[50%] w-full sm:opacity-100 opacity-20 sm:before:opacity-100 before:opacity-0"
         style={{
           backgroundImage: `url(${aboutBg.src})`,
-          width: "60%",
           height: "100%",
           backgroundPosition: "right",
           backgroundRepeat: "no-repeat",
